@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: rgb(223, 58, 58);
 }
 
 .topBar {
@@ -25,7 +26,8 @@ body {
 }
 .banner {
     width: 100%;
-    height: 400px;    
+    height: 400px;   
+
 }
 .imageContainer {
     display: flex;
@@ -41,7 +43,7 @@ body {
     /* opacity: 0.5; */
     background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("/Users/rpsoto/Desktop/lfz/macro-counter/images/all_fresh_vegetables.jpg");
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("/Users/rpsoto/Desktop/lfz/macro-counter/images/all_fresh_vegetables.jpg");
-    margin-left: 3.5%;
+    margin-left: 4.3%;
 }
 .imageContainer > h1, p {
     width: 50%;
