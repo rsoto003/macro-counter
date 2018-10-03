@@ -9,6 +9,12 @@ body {
   background-color: rgb(223, 58, 58);
 }
 
+#main-content {
+    display: grid;
+    grid-template-columns: ;
+}
+
+/* * need to add grid to layout instead * */
 .topBar {
     display: flex;
     flex-direction: row;
