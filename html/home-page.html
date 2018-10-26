@@ -34,16 +34,52 @@
                 </div>
               </nav> 
         <div class="container">
-                <div class="jumbotron jumbotron-image mt-3 img-fluid">
+                <div class="jumbotron jumbotron-image mt-5 img-fluid">
                         <div class="jumbotron mt-3 text-center">
                                 <h1 class="display-4">Count Your Calories!</h1>
                                 <p class="lead">Keeping track of your dietary goals is never fun, but we make it easy for you.</p>
                                 <hr class="my-4">
                                 <p>We help you control your diet, and meet your goals. </p>
-                                <a class="btn btn-danger btn-lg" href="#" role="button">Get Started</a>
+                                <a class="btn btn-danger btn-lg" href="#input" role="button">Get Started</a>
                               </div>
                         </div> 
-                </div> 
+                        <div class="row">
+                          <h1 class="display-4 text-center col-xl-12">What Did You Eat Today?</h1>
+                            <div class="form-group col-xl-6" id="input">
+                              <label for="exampleInputEmail1">Name</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Full Name Here">
+                              <small id="emailHelp" class="form-text text-muted">This is just for us. Your privacy is safe with us.</small>
+                            </div>
+                            <div class="form-group col-xl-6">
+                              <label for="exampleInputPassword1">Date</label>
+                              <br>
+                              <select class="custom-select" id="inputGroupSelect03">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Sunday</option>
+                                  <option value="2">Monday</option>
+                                  <option value="3">Tuesday</option>
+                                  <option value="3">Wednesday</option>
+                                  <option value="3">Thursday</option>
+                                  <option value="3">Friday</option>
+                                  <option value="3">Saturday</option>
+                                </select>
+                            </div>
+                            
+                            <!-- <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">8 Hours of Sleep?</label>
+                            </div> -->
+                            <div class="form-group col-xl-6" id="input">
+                                <label for="exampleInputEmail1">Calories</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Calorie Intake">                              </div>
+                              <div class="form-group col-xl-6">
+                                <label for="exampleInputPassword1">Carbs</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Carb Intake">
+                              </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>  
+                          
+          </div> 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
