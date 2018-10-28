@@ -51,34 +51,34 @@
                             <div class="form-group col-xl-4">
                                 <label for="exampleInputPassword1">Day</label>
                                 <br>
-                                <select class="custom-select" id="inputGroupSelect03">
+                                <select class="custom-select" id="daySelect">
                                     <option selected>Choose...</option>
-                                    <option value="1">Sunday</option>
-                                    <option value="2">Monday</option>
-                                    <option value="3">Tuesday</option>
-                                    <option value="3">Wednesday</option>
-                                    <option value="3">Thursday</option>
-                                    <option value="3">Friday</option>
-                                    <option value="3">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
                                   </select>
                               </div>
                               <div class="form-group col-xl-4">
                                   <label for="exampleInputPassword1">Type</label>
                                   <br>
-                                  <select class="custom-select" id="inputGroupSelect03">
+                                  <select class="custom-select" id="foodType">
                                       <option selected>Choose...</option>
-                                      <option value="1">Breakfast</option>
-                                      <option value="2">Lunch</option>
-                                      <option value="3">Dinner</option>
-                                      <option value="3">Dessert</option>
-                                      <option value="3">Snack</option>
+                                      <option value="Breakfast">Breakfast</option>
+                                      <option value="Lunch">Lunch</option>
+                                      <option value="Dinner">Dinner</option>
+                                      <option value="Dessert">Dessert</option>
+                                      <option value="Snack">Snack</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-xl-4" id="input">
+                                <div class="form-group col-xl-4">
                                     <label for="exampleInputEmail1">Food Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Food Name Here">
+                                    <input type="text" class="form-control" id="foodName" aria-describedby="emailHelp" placeholder="Enter Food Name Here">
                                   </div>
-                            <div class="form-group col-xl-4" id="input">
+                            <div class="form-group col-xl-4" id="calCount">
                                 <label for="exampleInputEmail1">Calories</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Calorie Intake">                              
                             </div>
@@ -102,10 +102,10 @@
                                   <label for="exampleInputPassword1">Sugar</label>
                                   <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Sugar Intake">
                                 </div> -->
-                            <button type="submit" class="btn btn-primary btn-lg mx-auto mt-2">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg mx-auto mt-2 submitButton">Submit</button>
                           </div>  
                           <table class="table table-bordered table-hover table-dark table-striped mt-5 col-xl-12">
-                              <h1 class="mt-5 display-4">Your Data</h1>
+                              <h1 class="mt-5 display-3 text-center">Your Data</h1>
                               <thead>
                                 <tr>
                                   <th scope="col">Day</th>
@@ -147,6 +147,7 @@
                                 </tr>  
                               </tbody>
                             </table>     
+                           
           </div> 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
