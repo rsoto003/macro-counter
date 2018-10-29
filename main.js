@@ -9,7 +9,6 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".submitButton").on('click', submitHandler);
-
 }
 
 function submitHandler(){
@@ -30,19 +29,25 @@ function submitHandler(){
 
     var fatCountData = $("<td>").text(fatCount);
 
-    
-
     tableRow.append(dayData, typeData, foodNameData, calCountData, carbCountData, fatCountData);
-
+    
     $("tbody").append(tableRow);
     clearInputs();
+    
 }
  
 function clearInputs(){
-    $("#daySelect").text("Choose...");
+    $("#daySelect").val("Choose...");
     $("#calCount").val("");
     $("#carbCount").val("");
     $("#fatCount").val("");
     $("#foodType").val("Choose...");
     $("#foodName").val(""); 
+}
+function inputCheck(){
+    if($("#calCount").val() !== ""){
+        console.log("this is not empty!");
+    } else {
+        console.log('this is currently empty :(');
+    }
 }
