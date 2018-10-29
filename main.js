@@ -24,23 +24,25 @@ function submitHandler(){
     var dayData = $("<th>").text(day);
     var typeData = $("<td>").text(foodType);
     var foodNameData = $("<td>").text(foodName);
+    var calCountData = $("<td>").text(calCount);
     var carbCountData = $("<td>").text(carbCount);
-    console.log(`fat count: ${fatCount}`);
-    console.log(`food name: ${foodName}`);
-    console.log(`day: ${day}`);
-    console.log(`carb count: ${carbCount}`);
-    console.log(`food type: ${foodType}`);
-    console.log(`calorie count: ${calCount}`);
+    var fatCountData = $("<td>").text(fatCount);
+
     var fatCountData = $("<td>").text(fatCount);
 
     
 
-    tableRow.append(dayData, typeData, foodNameData, carbCountData, fatCountData);
+    tableRow.append(dayData, typeData, foodNameData, calCountData, carbCountData, fatCountData);
 
     $("tbody").append(tableRow);
-    // clearInputs();
+    clearInputs();
 }
  
 function clearInputs(){
-    $("table").val("");
+    $("#daySelect").text("Choose...");
+    $("#calCount").val("");
+    $("#carbCount").val("");
+    $("#fatCount").val("");
+    $("#foodType").val("Choose...");
+    $("#foodName").val(""); 
 }
