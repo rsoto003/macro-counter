@@ -31,7 +31,7 @@ function submitHandler() {
 
     var fatCountData = $("<td>").text(fatCount);
 
-    tableRow.append(dayData, typeData, foodNameData, calCountData, carbCountData, fatCountData);
+    tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData);
     
     $("tbody").append(tableRow);
     clearInputs();
