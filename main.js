@@ -1,4 +1,4 @@
-var calCount;
+var proteinCount;
 var carbCount;
 var day;
 var foodName;
@@ -11,19 +11,21 @@ function initializeApp(){
     $(".submitButton").on('click', submitHandler);
 }
 
-function submitHandler(){
+function submitHandler() {
+
     day = $("#daySelect").val();
-    calCount = $("#calCount").val();
+    proteinCount = $("#proteinCount").val();
     foodType = $("#foodType").val();
     foodName = $("#foodName").val();
     carbCount = $("#carbCount").val(); 
     fatCount = $("#fatCount").val();
-
+    // macro calculations below
+    
     var tableRow = $("<tr>");
     var dayData = $("<th>").text(day);
     var typeData = $("<td>").text(foodType);
     var foodNameData = $("<td>").text(foodName);
-    var calCountData = $("<td>").text(calCount);
+    var proteinCountData = $("<td>").text(proteinCount);
     var carbCountData = $("<td>").text(carbCount);
     var fatCountData = $("<td>").text(fatCount);
 
@@ -38,14 +40,14 @@ function submitHandler(){
  
 function clearInputs(){
     $("#daySelect").val("Choose...");
-    $("#calCount").val("");
+    $("#proteinCount").val("");
     $("#carbCount").val("");
     $("#fatCount").val("");
     $("#foodType").val("Choose...");
     $("#foodName").val(""); 
 }
 function inputCheck(){
-    if($("#calCount").val() !== ""){
+    if($("#proteinCount").val() !== ""){
         console.log("this is not empty!");
     } else {
         console.log('this is currently empty :(');
