@@ -20,6 +20,10 @@ function submitHandler() {
     carbCount = $("#carbCount").val(); 
     fatCount = $("#fatCount").val();
     // macro calculations below
+
+    proteinCount = proteinCount * 4 + " cal";   
+    carbCount = carbCount * 4 + " cal";
+    fatCount = fatCount * 9 + " cal";   
     
     var tableRow = $("<tr>");
     var dayData = $("<th>").text(day);
