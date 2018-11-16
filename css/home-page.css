@@ -9,15 +9,27 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+} 
 }

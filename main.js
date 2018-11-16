@@ -12,7 +12,6 @@ function initializeApp(){
 }
 
 function submitHandler() {
-
     day = $("#daySelect").val();
     proteinCount = $("#proteinCount").val();
     foodType = $("#foodType").val();
@@ -51,9 +50,5 @@ function clearInputs(){
     $("#foodName").val(""); 
 }
 function inputCheck(){
-    if($("#proteinCount").val() !== ""){
-        console.log("this is not empty!");
-    } else {
-        console.log('this is currently empty :(');
-    }
+
 }
