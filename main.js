@@ -25,8 +25,9 @@ function submitHandler() {
     carbCount = carbCount * 4;
     fatCount = fatCount * 9;   
     totalCalories = proteinCount + carbCount + fatCount + "cal";
-    console.log(totalCalories);
     
+    //end macro calculations
+
     var tableRow = $("<tr>");
     var dayData = $("<th>").text(day);
     var typeData = $("<td>").text(foodType);
