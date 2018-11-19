@@ -52,6 +52,10 @@ function clearInputs(){
     $("#foodType").val("Choose...");
     $("#foodName").val(""); 
 }
-function inputCheck(){
 
+//function that checks to make sure inputs aren't empty and correct input is added
+function inputCheck(){
+    //needs to make sure input isn't empty
+    //needs to check to see if input is number or not
+    //if isNaN, send alert to user
 }
