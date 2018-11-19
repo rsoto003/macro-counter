@@ -6,10 +6,14 @@ var foodType;
 var fatCount;
 var totalCalories;
 
+
+
+
+
 $(document).ready(initializeApp);
 
 function initializeApp(){
-    $(".submitButton").on('click', submitHandler);
+    $(".submitButton").on('click', inputCheck);
 }
 
 function submitHandler() {
@@ -53,9 +57,17 @@ function clearInputs(){
     $("#foodName").val(""); 
 }
 
+
 //function that checks to make sure inputs aren't empty and correct input is added
 function inputCheck(){
-    //needs to make sure input isn't empty
-    //needs to check to see if input is number or not
-    //if isNaN, send alert to user
+    var form1 = $(".form1").val();
+    var form2 = $(".form2").val();
+    var form3 = $(".form3").val();
+    var form4 = $(".form4").val();
+    if(!(form1 && form2 && form3 && form4)){
+        alert("a form is empty!");
+    } else {
+        console.log("submitHandler true")
+        submitHandler();
+    }
 }
