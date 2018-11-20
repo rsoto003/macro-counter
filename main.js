@@ -45,6 +45,11 @@ function submitHandler() {
         'class': "btn btn-danger btn-sm ",
         type: "button",
         text: 'Delete',
+        on: {
+            'click': function(){
+                tableRow.remove();
+            }
+        }
     });
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
@@ -64,6 +69,8 @@ function clearInputs(){
 }
 
 //function that checks to make sure inputs aren't empty and correct input is added
+//need to check to see if both form values are chosen, 
+
 function inputCheck(){
     var form1 = $(".form1").val();
     var form2 = $(".form2").val();
@@ -71,18 +78,18 @@ function inputCheck(){
     var form4 = $(".form4").val();
     if(form1 && form2 && form3 && form4){
         if(!isNaN(form2 && form3 && form4)){
-            alert('these are numbers');
-            console.log("these are numbers");
             submitHandler();
             return true;
         } else {
-            alert('not numbers bro');
-            console.log("these are not numbers");
+            //add alert modal here??
             return false;
         }
     } else {
+        //add alert modal here??
         alert("form is empty")
     }
 }
+
+//delete button handler function here:
 
 
