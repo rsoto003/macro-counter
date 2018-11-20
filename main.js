@@ -40,8 +40,14 @@ function submitHandler() {
     var carbCountData = $("<td>").text(carbCount + "cal");
     var fatCountData = $("<td>").text(fatCount +"cal");
     var totalCalorieData = $("<td>").text(totalCalories);
-
-    tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData);
+    var buttonCell = $("<td>");
+    var deleteButton = $("<button>", {
+        'class': "btn btn-danger btn-sm ",
+        type: "button",
+        text: 'Delete',
+    });
+    buttonCell.append(deleteButton);
+    tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
     $("tbody").append(tableRow);
     clearInputs();
@@ -57,10 +63,8 @@ function clearInputs(){
     $("#foodName").val(""); 
 }
 
-
 //function that checks to make sure inputs aren't empty and correct input is added
 function inputCheck(){
-    checkNumbers();
     var form1 = $(".form1").val();
     var form2 = $(".form2").val();
     var form3 = $(".form3").val();
