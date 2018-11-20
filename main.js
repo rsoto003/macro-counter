@@ -65,25 +65,20 @@ function inputCheck(){
     var form2 = $(".form2").val();
     var form3 = $(".form3").val();
     var form4 = $(".form4").val();
-    if(!(form1 && form2 && form3 && form4)){
-        alert("a form is empty!");
-
+    if(form1 && form2 && form3 && form4){
+        if(!isNaN(form2 && form3 && form4)){
+            alert('these are numbers');
+            console.log("these are numbers");
+            submitHandler();
+            return true;
+        } else {
+            alert('not numbers bro');
+            console.log("these are not numbers");
+            return false;
+        }
     } else {
-        console.log("submitHandler true")
-        submitHandler();
+        alert("form is empty")
     }
 }
 
 
-//function that checks to see if the forms 2, 3 and 4 are numbers
-function checkNumbers(){
-    if(!isNaN(form2 && form3 && form4)){
-        alert('these are numbers');
-        console.log("these are numbers");
-        return true;
-    } else {
-        alert('not numbers bro');
-        console.log("these are not numbers");
-        return false;
-    }
-}
