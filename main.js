@@ -45,6 +45,8 @@ function submitHandler() {
         'class': "btn btn-danger btn-sm ",
         type: "button",
         text: 'Delete',
+        datatoggle: 'modal',
+        dataTarget: "bd-example-modal-sm",
         on: {
             'click': function(){
                 tableRow.remove();
