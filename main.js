@@ -5,6 +5,14 @@ var foodName;
 var foodType;
 var fatCount;
 var totalCalories;
+var testArr =[
+    ['Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday'],
+    ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', ],
+    ['Eggs', 'Spaghetti','Steak Burrito', 'Chips', 'Pizooki'],
+    [9, 8, 10, 3, 5],
+    [20, 5, 8, 13, 11],
+    [19, 4, 10, 25, 30]
+]
 
 
 
@@ -92,6 +100,9 @@ function inputCheck(){
     }
 }
 
-//delete button handler function here:
+//test data function here: 
+function testData(arr){
+
+}
 
 
