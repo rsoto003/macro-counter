@@ -35,13 +35,64 @@ var testObj2 = {
     carbs: 9,
     fat: 15
 }
+var testObj3 = {
+    day: 'Friday',
+    type: 'Dinner',
+    food: 'Tacos',
+    protein: 15,
+    carbs: 12,
+    fat: 20
+}
+var testObj4 = {
+    day: 'Friday',
+    type: 'Dinner',
+    food: 'Tacos',
+    protein: 15,
+    carbs: 12,
+    fat: 20
+}
+var testObj5 = {
+    day: 'Friday',
+    type: 'Dinner',
+    food: 'Tacos',
+    protein: 15,
+    carbs: 12,
+    fat: 20
+}
+var testObj6 = {
+    obj1 : {
+        day: 'Friday',
+        type: 'Dinner',
+        food: 'Tacos',
+        protein: 15,
+        carbs: 12,
+        fat: 20
+    },
+    obj2: {
+        day: 'Monday',
+        type: 'Dinner',
+        food: 'Steak',
+        protein: 12,
+        carbs: 13,
+        fat: 100
+    },
+    obj3: {
+        day: 'Thursday',
+        type: 'Dessert',
+        food: 'Pizookie',
+        protein: 100,
+        carbs: 4,
+        fat: 89
+    }
+}
 
 $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
-    testData(testObj1);
-    testData(testObj2);
+    testData(testObj6.obj1);
+    testData(testObj6.obj2);
+    testData(testObj6.obj3);
 }
 
 function submitHandler() {
@@ -144,14 +195,18 @@ function testData(obj){
         }
     });
 
+    obj.protein = obj.protein * 4;
+    obj.carbs = obj.carbs * 4;
+    obj.fat = obj.fat * 9;
+
     dayData.text(obj.day)
     typeData.text(obj.type);
     foodNameData.text(obj.food)
-    proteinCountData.text(obj.protein);
-    carbCountData.text(obj.carbs);
-    fatCountData.text(obj.fat);
+    proteinCountData.text(obj.protein + " cal");
+    carbCountData.text(obj.carbs + " cal");
+    fatCountData.text(obj.fat + " cal");
     totalCalories = obj.protein + obj.carbs + obj.fat;
-    totalCalorieData.text(totalCalories);
+    totalCalorieData.text(totalCalories + " cal");
 
     $("tbody").append(tableRow);
     buttonCell.append(deleteButton);
