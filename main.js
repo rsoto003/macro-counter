@@ -5,23 +5,43 @@ var foodName;
 var foodType;
 var fatCount;
 var totalCalories;
-var testArr =[
-    ['Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday'],
-    ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', ],
-    ['Eggs', 'Spaghetti','Steak Burrito', 'Chips', 'Pizooki'],
-    [9, 8, 10, 3, 5],
-    [20, 5, 8, 13, 11],
-    [19, 4, 10, 25, 30]
+
+// var testArr = [ 
+//     ['Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday'],
+//     ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', ],
+//     ['Eggs', 'Spaghetti','Steak Burrito', 'Chips', 'Pizooki'],
+//     [9, 8, 10, 3, 5],
+//     [20, 5, 8, 13, 11],
+//     [19, 4, 10, 25, 30]
+// ]
+var testArr = [
+    ['Monday', 'Breakfast', 'Eggs', 9, 20, 19],
+    ['Tuesday', 'Lunch', 'Spaghetti', 8, 5, 4]
 ]
 
-
-
-
+var testObj1 = {
+    day: 'Tuesday',
+    type: 'Breakfast',
+    food: 'Eggs',
+    protein: 9,
+    carbs: 20,
+    fat: 19
+}
+var testObj2 = {
+    day: 'Wednesday',
+    type: 'Lunch',
+    food: 'Spaghetti',
+    protein: 8,
+    carbs: 9,
+    fat: 15
+}
 
 $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
+    testData(testObj1);
+    testData(testObj2);
 }
 
 function submitHandler() {
@@ -101,7 +121,44 @@ function inputCheck(){
 }
 
 //test data function here: 
-function testData(arr){
+function testData(obj){
+    var tableRow = $("<tr>");
+    var dayData = $("<th>");
+    var typeData = $("<td>");
+    var foodNameData = $("<td>");
+    var proteinCountData = $("<td>").text(proteinCount + "cal");
+    var carbCountData = $("<td>").text(carbCount + "cal");
+    var fatCountData = $("<td>").text(fatCount +"cal");
+    var totalCalorieData = $("<td>").text(totalCalories);
+    var buttonCell = $("<td>");
+    var deleteButton = $("<button>", {
+        'class': "btn btn-danger btn-sm ",
+        type: "button",
+        text: 'Delete',
+        datatoggle: 'modal',
+        dataTarget: "bd-example-modal-sm",
+        on: {
+            'click': function(){
+                tableRow.remove();
+            }
+        }
+    });
+
+    dayData.text(obj.day)
+    typeData.text(obj.type);
+    foodNameData.text(obj.food)
+    proteinCountData.text(obj.protein);
+    carbCountData.text(obj.carbs);
+    fatCountData.text(obj.fat);
+    totalCalories = obj.protein + obj.carbs + obj.fat;
+    totalCalorieData.text(totalCalories);
+
+    $("tbody").append(tableRow);
+    buttonCell.append(deleteButton);
+    tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
+    
+    $("tbody").append(tableRow);
+
 
 }
 
