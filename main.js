@@ -6,60 +6,8 @@ var foodType;
 var fatCount;
 var totalCalories;
 
-// var testArr = [ 
-//     ['Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday'],
-//     ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert', ],
-//     ['Eggs', 'Spaghetti','Steak Burrito', 'Chips', 'Pizooki'],
-//     [9, 8, 10, 3, 5],
-//     [20, 5, 8, 13, 11],
-//     [19, 4, 10, 25, 30]
-// ]
-var testArr = [
-    ['Monday', 'Breakfast', 'Eggs', 9, 20, 19],
-    ['Tuesday', 'Lunch', 'Spaghetti', 8, 5, 4]
-]
 
-var testObj1 = {
-    day: 'Tuesday',
-    type: 'Breakfast',
-    food: 'Eggs',
-    protein: 9,
-    carbs: 20,
-    fat: 19
-}
-var testObj2 = {
-    day: 'Wednesday',
-    type: 'Lunch',
-    food: 'Spaghetti',
-    protein: 8,
-    carbs: 9,
-    fat: 15
-}
-var testObj3 = {
-    day: 'Friday',
-    type: 'Dinner',
-    food: 'Tacos',
-    protein: 15,
-    carbs: 12,
-    fat: 20
-}
-var testObj4 = {
-    day: 'Friday',
-    type: 'Dinner',
-    food: 'Tacos',
-    protein: 15,
-    carbs: 12,
-    fat: 20
-}
-var testObj5 = {
-    day: 'Friday',
-    type: 'Dinner',
-    food: 'Tacos',
-    protein: 15,
-    carbs: 12,
-    fat: 20
-}
-var testObj6 = {
+var testObj = {
     obj1 : {
         day: 'Friday',
         type: 'Dinner',
@@ -83,6 +31,46 @@ var testObj6 = {
         protein: 100,
         carbs: 4,
         fat: 89
+    },
+    obj4: {
+        day: 'Friday',
+        type: 'Breakfast',
+        food: 'Pancakes',
+        protein: 3,
+        carbs: 21,
+        fat: 12
+    },
+    obj5: {
+        day: 'Friday',
+        type: 'Lunch',
+        food: 'Salad',
+        protein: 17,
+        carbs: 15,
+        fat: 2
+    },
+    obj6: {
+        day: 'Friday',
+        type: 'Dinner',
+        food: 'Chicken Noodle Soup',
+        protein: 10,
+        carbs: 10,
+        fat: 19
+    },
+    obj7: {
+        day: 'Saturday:',
+        type: 'Breakfast',
+        food: 'Bagel',
+        protein: 7,
+        carbs: 9,
+        fat: 1
+    }, 
+    obj8: {
+        day: 'Saturday',
+        type: 'Lunch',
+        food: 'Cheeseburger',
+        protein: 5,
+        carbs: 12,
+        fat: 8
     }
 }
 
@@ -90,9 +78,13 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
-    testData(testObj6.obj1);
-    testData(testObj6.obj2);
-    testData(testObj6.obj3);
+    testData(testObj.obj1);
+    testData(testObj.obj2);
+    testData(testObj.obj3);
+    testData(testObj.obj5);
+    testData(testObj.obj6);
+    testData(testObj.obj7);
+    testData(testObj.obj8);
 }
 
 function submitHandler() {
