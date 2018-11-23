@@ -81,6 +81,7 @@ function initializeApp(){
     testData(testObj.obj1);
     testData(testObj.obj2);
     testData(testObj.obj3);
+    testData(testObj.obj4);
     testData(testObj.obj5);
     testData(testObj.obj6);
     testData(testObj.obj7);
