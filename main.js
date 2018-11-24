@@ -78,6 +78,7 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
+
     testData(testObj.obj1);
     testData(testObj.obj2);
     testData(testObj.obj3);
