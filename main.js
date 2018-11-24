@@ -176,11 +176,11 @@ function testData(obj){
     var totalCalorieData = $("<td>").text(totalCalories);
     var buttonCell = $("<td>");
     var deleteButton = $("<button>", {
-        'class': "btn btn-danger btn-sm ",
+        class: "btn btn-danger btn-sm",
         type: "button",
         text: 'Delete',
         datatoggle: 'modal',
-        dataTarget: "bd-example-modal-sm",
+        dataTarget: "#deleteModal",
         on: {
             'click': function(){
                 tableRow.remove();
