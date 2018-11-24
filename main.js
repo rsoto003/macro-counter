@@ -179,13 +179,9 @@ function testData(obj){
         class: "btn btn-danger btn-sm",
         type: "button",
         text: 'Delete',
-        datatoggle: 'modal',
-        dataTarget: "#deleteModal",
-        on: {
-            'click': function(){
-                tableRow.remove();
-            }
-        }
+        'data-toggle': 'modal',
+        'data-target': "#deleteModal",
+        
     });
 
     obj.protein = obj.protein * 4;
@@ -209,5 +205,7 @@ function testData(obj){
 
 
 }
+
+
 
 
