@@ -57,7 +57,7 @@ var testObj = {
         fat: 19
     },
     obj7: {
-        day: 'Saturday:',
+        day: 'Saturday',
         type: 'Breakfast',
         food: 'Bagel',
         protein: 7,
