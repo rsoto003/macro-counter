@@ -124,20 +124,21 @@ function submitHandler() {
         type: "button",
         text: 'Delete',
         'data-toggle': 'modal',
-        'data-target': "bd-example-modal-sm",
+        // 'data-target': "bd-example-modal-sm",
         'data-target': '#deleteModal',
     
-        // on: {
-        //     'click': function(){
-        //         dataToggle: 'modal';
-        //         dataTarget: "bd-example-modal-sm";
-
-        //         console.log('should be directing to modal')
-        //     }
-        // }
+        on: {
+            'click': function(){
+                // dataToggle: 'modal';
+                // dataTarget: "bd-example-modal-sm";
+                // $("#deleteModal").modal("show");
+                console.log('should be directing to modal')
+            }
+        }
     });
 
     var modalContainer = $("<div>", {
+        'display': 'hidden',
         id: '#deleteModal',
         'class': 'modal fade',
         'tab-index': -1,
@@ -208,7 +209,7 @@ function submitHandler() {
 
    /* end modal appending */
 
-    // deleteButton.append(modalContainer);
+    $(".table").append(modalContainer);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
