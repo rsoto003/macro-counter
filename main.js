@@ -5,6 +5,7 @@ var foodName;
 var foodType;
 var fatCount;
 var totalCalories;
+var rowToDelete;
 
 
 var testObj = {
@@ -87,6 +88,8 @@ function initializeApp(){
     testData(testObj.obj6);
     testData(testObj.obj7);
     testData(testObj.obj8);
+
+
 }
 
 function submitHandler() {
@@ -118,20 +121,77 @@ function submitHandler() {
         'class': "btn btn-danger btn-sm ",
         type: "button",
         text: 'Delete',
-        datatoggle: 'modal',
-        dataTarget: "bd-example-modal-sm",
+        // datatoggle: 'modal',
+        // dataTarget: "bd-example-modal-sm",
         on: {
             'click': function(){
                 tableRow.remove();
             }
         }
     });
+
+    var modalContainer = $("<div>", {
+        'class': 'modal fade',
+        'tab-index': -1,
+        role: 'dialog',
+        'aria-labelledby': 'deleteModal',
+        'aria-hidden': true
+    });
+   var modalDialog = $("<div>", {
+       'class': 'modal-dialog modal-dialog-centered',
+       'role': 'document'
+   });
+   var modalContent = $("<div>", {
+       'class': 'modal-content bg-dark'
+   });
+   var modalHeaderContainer = $("<div>", {
+       'class': 'modal-header bg-dark'
+   }) 
+   var modalHeader = $("<h5>", {
+       'class': 'modal-title bg-dark',
+       text: 'Confirm Delete'
+   })
+   var closeButton = $("<button>", {
+       'class': 'close',
+        type: 'button',
+        'data-dismiss': 'modal',
+        'aria-label': 'close'
+   })
+   var spanX = $("<span>", {
+       'aria-hidden': true,
+       text: '&times;'
+   })
+   var modalBody = $("<div>", {
+       'class': 'modal-body bg-dark',
+       text: 'Are you sure you wish to delete this record?'
+   })
+   var modalFooter = $("<div>", {
+       'class': 'modal-footer bg-dark'
+   })
+   var modalDelete = $("<button>", {
+       type: 'button',
+       'class': 'btn btn-danger',
+       text: 'Delete',
+       on: {
+           'click': function(){
+               tableRow.remove();
+           }
+       }  
+   })
+   var modalCancel = $("<button>", {
+       'class': 'btn btn-sucess',
+       'data-dismiss': 'modal',
+       type: 'button',
+       text: 'Cancel'
+   })
+
+
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
     $("tbody").append(tableRow);
     clearInputs();
-    
+    return tableRow;
 }
  
 function clearInputs(){
@@ -185,6 +245,7 @@ function testData(obj){
         
     });
 
+    
     obj.protein = obj.protein * 4;
     obj.carbs = obj.carbs * 4;
     obj.fat = obj.fat * 9;
@@ -203,7 +264,6 @@ function testData(obj){
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
     $("tbody").append(tableRow);
-
 
 }
 
