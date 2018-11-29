@@ -100,6 +100,8 @@ function submitHandler() {
     carbCount = $("#carbCount").val(); 
     fatCount = $("#fatCount").val();
     // macro calculations below
+    var dataTarget = 'data-target';
+    var dataToggle = 'data-toggle';
 
     proteinCount = proteinCount * 4;   
     carbCount = carbCount * 4;
@@ -121,19 +123,26 @@ function submitHandler() {
         'class': "btn btn-danger btn-sm ",
         type: "button",
         text: 'Delete',
-        // datatoggle: 'modal',
-        // dataTarget: "bd-example-modal-sm",
-        on: {
-            'click': function(){
-                tableRow.remove();
-            }
-        }
+        'data-toggle': 'modal',
+        'data-target': "bd-example-modal-sm",
+        'data-target': '#deleteModal',
+    
+        // on: {
+        //     'click': function(){
+        //         dataToggle: 'modal';
+        //         dataTarget: "bd-example-modal-sm";
+
+        //         console.log('should be directing to modal')
+        //     }
+        // }
     });
 
     var modalContainer = $("<div>", {
+        id: '#deleteModal',
         'class': 'modal fade',
         'tab-index': -1,
         role: 'dialog',
+        'data-target': "bd-example-modal-sm",
         'aria-labelledby': 'deleteModal',
         'aria-hidden': true
     });
@@ -184,8 +193,22 @@ function submitHandler() {
        type: 'button',
        text: 'Cancel'
    })
+    
+   /* modal appending */
+   modalFooter.append(modalDelete, modalCancel);
+   closeButton.append(spanX);
+   modalHeaderContainer.append(modalHeader,closeButton);
+   modalContent.append(modalHeaderContainer, modalBody, modalFooter);
+   modalDialog.append(modalContent);
+   modalContainer.append(modalDialog);
 
 
+
+
+
+   /* end modal appending */
+
+    // deleteButton.append(modalContainer);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
