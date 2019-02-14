@@ -80,14 +80,14 @@ $(document).ready(initializeApp);
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
 
-    // testData(testObj.obj1);
-    // testData(testObj.obj2);
-    // testData(testObj.obj3);
-    // testData(testObj.obj4);
-    // testData(testObj.obj5);
-    // testData(testObj.obj6);
-    // testData(testObj.obj7);
-    // testData(testObj.obj8);
+    testData(testObj.obj1);
+    testData(testObj.obj2);
+    testData(testObj.obj3);
+    testData(testObj.obj4);
+    testData(testObj.obj5);
+    testData(testObj.obj6);
+    testData(testObj.obj7);
+    testData(testObj.obj8);
 
 
 }
@@ -129,17 +129,12 @@ function submitHandler() {
         }
     });
 
-    // $("tbody").append(tableRow);
-    // buttonCell.append(deleteButton);
-    // tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
-    
-    // $("tbody").append(tableRow);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
 
     
     $("tbody").append(tableRow);
-
+    clearInputs();
 
     return tableRow;
 }
@@ -163,15 +158,12 @@ function inputCheck(){
     var form4 = $(".form4").val();
     if(form1 && form2 && form3 && form4){
         if(!isNaN(form2 && form3 && form4)){
-            console.log('the forms are not empty, submitting now!')
             submitHandler();
             return true;
         } else {
-            //add alert modal here??
             return false;
         }
     } else {
-        //add alert modal here??
         alert("form is empty")
     }
 }
@@ -210,11 +202,6 @@ function testData(obj){
     totalCalories = obj.protein + obj.carbs + obj.fat;
     totalCalorieData.text(totalCalories + " cal");
 
-    // $("tbody").append(tableRow);
-    // buttonCell.append(deleteButton);
-    // tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
-    
-    // $("tbody").append(tableRow);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
