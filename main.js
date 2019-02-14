@@ -117,7 +117,7 @@ function submitHandler() {
     var totalCalorieData = $("<td>").text(totalCalories);
     var buttonCell = $("<td>");
     var deleteButton = $("<button>",{
-        'class' : 'btn btn-danger',
+        'class' : 'btn btn-danger btn-sm',
         type: 'button',
         text: 'Delete',
         on: {
