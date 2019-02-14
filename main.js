@@ -80,19 +80,20 @@ $(document).ready(initializeApp);
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
 
-    testData(testObj.obj1);
-    testData(testObj.obj2);
-    testData(testObj.obj3);
-    testData(testObj.obj4);
-    testData(testObj.obj5);
-    testData(testObj.obj6);
-    testData(testObj.obj7);
-    testData(testObj.obj8);
+    // testData(testObj.obj1);
+    // testData(testObj.obj2);
+    // testData(testObj.obj3);
+    // testData(testObj.obj4);
+    // testData(testObj.obj5);
+    // testData(testObj.obj6);
+    // testData(testObj.obj7);
+    // testData(testObj.obj8);
 
 
 }
 
 function submitHandler() {
+    console.log('submitHandler was called');
     day = $("#daySelect").val();
     proteinCount = $("#proteinCount").val();
     foodType = $("#foodType").val();
@@ -100,8 +101,6 @@ function submitHandler() {
     carbCount = $("#carbCount").val(); 
     fatCount = $("#fatCount").val();
     // macro calculations below
-    var dataTarget = 'data-target';
-    var dataToggle = 'data-toggle';
 
     proteinCount = proteinCount * 4;   
     carbCount = carbCount * 4;
@@ -119,102 +118,29 @@ function submitHandler() {
     var fatCountData = $("<td>").text(fatCount +"cal");
     var totalCalorieData = $("<td>").text(totalCalories);
     var buttonCell = $("<td>");
-    var deleteButton = $("<button>", {
-        'class': "btn btn-danger btn-sm ",
-        type: "button",
+    var deleteButton = $("<button>",{
+        'class' : 'btn btn-danger',
+        type: 'button',
         text: 'Delete',
-        'data-toggle': 'modal',
-        // 'data-target': "bd-example-modal-sm",
-        'data-target': '#deleteModal',
-    
         on: {
             'click': function(){
-                // dataToggle: 'modal';
-                // dataTarget: "bd-example-modal-sm";
-                // $("#deleteModal").modal("show");
-                console.log('should be directing to modal')
+                tableRow.remove();
             }
         }
     });
 
-    var modalContainer = $("<div>", {
-        'display': 'hidden',
-        id: '#deleteModal',
-        'class': 'modal fade',
-        'tab-index': -1,
-        role: 'dialog',
-        'data-target': "bd-example-modal-sm",
-        'aria-labelledby': 'deleteModal',
-        'aria-hidden': true
-    });
-   var modalDialog = $("<div>", {
-       'class': 'modal-dialog modal-dialog-centered',
-       'role': 'document'
-   });
-   var modalContent = $("<div>", {
-       'class': 'modal-content bg-dark'
-   });
-   var modalHeaderContainer = $("<div>", {
-       'class': 'modal-header bg-dark'
-   }) 
-   var modalHeader = $("<h5>", {
-       'class': 'modal-title bg-dark',
-       text: 'Confirm Delete'
-   })
-   var closeButton = $("<button>", {
-       'class': 'close',
-        type: 'button',
-        'data-dismiss': 'modal',
-        'aria-label': 'close'
-   })
-   var spanX = $("<span>", {
-       'aria-hidden': true,
-       text: '&times;'
-   })
-   var modalBody = $("<div>", {
-       'class': 'modal-body bg-dark',
-       text: 'Are you sure you wish to delete this record?'
-   })
-   var modalFooter = $("<div>", {
-       'class': 'modal-footer bg-dark'
-   })
-   var modalDelete = $("<button>", {
-       type: 'button',
-       'class': 'btn btn-danger',
-       text: 'Delete',
-       on: {
-           'click': function(){
-               tableRow.remove();
-           }
-       }  
-   })
-   var modalCancel = $("<button>", {
-       'class': 'btn btn-sucess',
-       'data-dismiss': 'modal',
-       type: 'button',
-       text: 'Cancel'
-   })
+    // $("tbody").append(tableRow);
+    // buttonCell.append(deleteButton);
+    // tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
-   /* modal appending */
-   modalFooter.append(modalDelete, modalCancel);
-   closeButton.append(spanX);
-   modalHeaderContainer.append(modalHeader,closeButton);
-   modalContent.append(modalHeaderContainer, modalBody, modalFooter);
-   modalDialog.append(modalContent);
-   modalContainer.append(modalDialog);
-
-
-
-
-
-   /* end modal appending */
-
-    $(".table").append(modalContainer);
+    // $("tbody").append(tableRow);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
+
     
     $("tbody").append(tableRow);
-    clearInputs();
+
+
     return tableRow;
 }
  
@@ -237,6 +163,7 @@ function inputCheck(){
     var form4 = $(".form4").val();
     if(form1 && form2 && form3 && form4){
         if(!isNaN(form2 && form3 && form4)){
+            console.log('the forms are not empty, submitting now!')
             submitHandler();
             return true;
         } else {
@@ -283,12 +210,15 @@ function testData(obj){
     totalCalories = obj.protein + obj.carbs + obj.fat;
     totalCalorieData.text(totalCalories + " cal");
 
-    $("tbody").append(tableRow);
+    // $("tbody").append(tableRow);
+    // buttonCell.append(deleteButton);
+    // tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
+    
+    // $("tbody").append(tableRow);
     buttonCell.append(deleteButton);
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
     $("tbody").append(tableRow);
-
 }
 
 
