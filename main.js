@@ -88,9 +88,7 @@ function initializeApp(){
     testData(testObj.obj6);
     testData(testObj.obj7);
     testData(testObj.obj8);
-
-
-}
+};
 
 function submitHandler() {
     console.log('submitHandler was called');
@@ -206,7 +204,7 @@ function testData(obj){
     tableRow.append(dayData, typeData, foodNameData, proteinCountData, carbCountData, fatCountData, totalCalorieData, buttonCell);
     
     $("tbody").append(tableRow);
-}
+};
 
 
 
