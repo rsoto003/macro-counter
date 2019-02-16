@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home-page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../main.js"></script>
+    <title>MacroCounter</title>
+</head>
+    <body class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <a class="navbar-brand" href="#">Macro Counter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./info.html">Macro Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Your Data</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Profile</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav> 
+
+        <!-- table data  -->
+  <div class="row col-xl-10 mx-auto border border-dark border-bottom-0 border-right-0 border-left-0 pt-5">
+
+        <h1 class="display-4 text-center col-xl-12">What Did You Eat Today?</h1>
+        <!-- alert div--> 
+        <!-- <div class="alert alert-danger alert-dismissible fade show col-xl-8 d-block"  id="alertMessage" role="alert">
+            <strong>Error: </strong> All fields must be completed.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+          <!-- end alert div --> 
+        <div class="form-group col-xl-4">
+          
+          <label for="exampleInputPassword1">Day</label>
+            <br>
+            
+          <select class="custom-select" id="daySelect">
+            <option selected>Choose...</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+          </select>
+        </div>
+        <div class="form-group col-xl-4">
+          <label for="exampleInputPassword1">Type</label>
+          <br>
+          <select class="custom-select" id="foodType">
+            <option selected>Choose...</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Snack">Snack</option>
+          </select>
+        </div>
+        <div class="form-group col-xl-4">
+          <label for="exampleInputEmail1">Food Name</label>
+          <input type="text" class="form-control form1" id="foodName" aria-describedby="emailHelp" placeholder="Enter Food Name Here">
+        </div>
+        <div class="form-group col-xl-4">
+          <label for="exampleInputEmail1">Protein</label>
+          <input type="text" class="form-control form2" id="proteinCount" aria-describedby="emailHelp" placeholder="Enter Protein Intake">                              
+        </div>
+        <div class="form-group col-xl-4">
+          <label for="exampleInputPassword1">Carbs</label>
+          <input type="text" class="form-control form3" id="carbCount" placeholder="Enter Carb Intake">
+        </div>
+        <div class="form-group col-xl-4">
+          <label for="exampleInputPassword1">Fat</label>
+          <input type="text" class="form-control form4" id="fatCount" placeholder="Enter Fat Intake">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg mx-auto mt-2 submitButton">Submit</button>
+      </div>  
+             
+    
+    
+    
+      <table class="table table-hover table-dark table-striped mt-5 col-xl-10 mx-auto text-light" id="userData">
+        <h1 class="mt-5 display-3 text-center">Your Data</h1>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Type</th>
+            <th scope="col">Food Name</th>
+            <th scope="col">Protein</th>
+            <th scope="col">Carbs</th>
+            <th scope="col">Fat</th>
+            <th scope="col">Total Calories</th>
+            <th scope="col"> </th>
+          </tr>
+          </thead>
+          
+          <tbody>
+          <!-- dynamic content goes here -->
+          </tbody>
+      </table>      
+    </body>
+
+</html>
