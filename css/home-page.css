@@ -2,6 +2,9 @@
     background-image: url("../images/all_fresh_vegetables.jpg");
     background-size: cover;
 }
+
+
+
 /* Large desktop */
 @media (min-width: 1200px) {
   
@@ -13,7 +16,7 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-}
+  }
 }
  
 /* Landscape phone to portrait tablet */

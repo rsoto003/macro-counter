@@ -80,14 +80,14 @@ $(document).ready(initializeApp);
 function initializeApp(){
     $(".submitButton").on('click', inputCheck);
 
-    testData(testObj.obj1);
-    testData(testObj.obj2);
-    testData(testObj.obj3);
-    testData(testObj.obj4);
-    testData(testObj.obj5);
-    testData(testObj.obj6);
-    testData(testObj.obj7);
-    testData(testObj.obj8);
+    // testData(testObj.obj1);
+    // testData(testObj.obj2);
+    // testData(testObj.obj3);
+    // testData(testObj.obj4);
+    // testData(testObj.obj5);
+    // testData(testObj.obj6);
+    // testData(testObj.obj7);
+    // testData(testObj.obj8);
 };
 
 function submitHandler() {
@@ -117,7 +117,7 @@ function submitHandler() {
     var totalCalorieData = $("<td>").text(totalCalories);
     var buttonCell = $("<td>");
     var deleteButton = $("<button>",{
-        'class' : 'btn btn-danger',
+        'class' : 'btn btn-danger btn-sm',
         type: 'button',
         text: 'Delete',
         on: {
@@ -162,7 +162,8 @@ function inputCheck(){
             return false;
         }
     } else {
-        alert("form is empty")
+        alert("form is empty");
+        // $("#alertMessage").show();
     }
 }
 
@@ -206,6 +207,14 @@ function testData(obj){
     $("tbody").append(tableRow);
 };
 
+
+//function to check for success or error
+
+function alertMessage(){
+    if(!inputCheck){
+        $(".alertMessage").show();
+    } 
+}
 
 
 
