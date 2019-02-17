@@ -144,10 +144,7 @@ function clearInputs(){
     $("#fatCount").val("");
     $("#foodType").val("Choose...");
     $("#foodName").val(""); 
-}
-
-//function that checks to make sure inputs aren't empty and correct input is added
-//need to check to see if both form values are chosen, 
+};
 
 function inputCheck(){
     var form1 = $(".form1").val();
@@ -163,9 +160,8 @@ function inputCheck(){
         }
     } else {
         alert("form is empty");
-        // $("#alertMessage").show();
-    }
-}
+    };
+};
 
 //test data function here: 
 function testData(obj){
@@ -186,8 +182,7 @@ function testData(obj){
             'click': function(){
                 tableRow.remove();
             }
-        }
-        
+        }  
     });
 
     
