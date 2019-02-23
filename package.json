@@ -1,0 +1,25 @@
+{
+  "name": "macro-counter",
+  "version": "1.0.0",
+  "description": "Macro Calculator for dietary needs.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsoto003/macro-counter.git"
+  },
+  "author": "Ryan Soto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsoto003/macro-counter/issues"
+  },
+  "homepage": "https://github.com/rsoto003/macro-counter#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "npm": "^6.8.0"
+  }
+}
