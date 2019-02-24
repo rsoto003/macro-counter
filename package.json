@@ -2,7 +2,7 @@
   "name": "macro-counter",
   "version": "1.0.0",
   "description": "Macro Calculator for dietary needs.",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/rsoto003/macro-counter#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
     "mongoose": "^5.4.15",
     "nodemon": "^1.18.10",
-    "npm": "^6.8.0"
+    "npm": "^6.8.0",
+    "path": "^0.12.7"
   }
 }
